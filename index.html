@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selligine — Modern Retail & Provision Store POS</title>
+  <meta name="description" content="Selligine is a complete retail and provision store POS system with 40 populated products, 14-day sales history, role-based staff portals, inventory management, and financial reconciliation." />
+  
+  <!-- Modern Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Sticky Active Role Session Notification Bar (shown during portal exploration) -->
+  <div id="roleSessionBar" class="role-session-bar" style="display: none;"></div>
+
+  <!-- Primary Site Header -->
+  <header class="site-header">
+    <div class="brand-container" onclick="exitToLanding()">
+      <div class="brand-icon">
+        <!-- Exact Triple Layered Squares Selligine Logo -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 12 12 17 22 12"></polyline>
+          <polyline points="2 17 12 22 22 17"></polyline>
+        </svg>
+      </div>
+      <span class="brand-name">Selligine</span>
+    </div>
+
+    <nav class="nav-links">
+      <button class="nav-link" onclick="exitToLanding()">Home</button>
+      <button class="btn-register-business" onclick="openRegisterModal()">Register Business</button>
+    </nav>
+  </header>
+
+  <!-- Dynamic Application Subnavigation for POS, Inventory, Reports, Staff, Settings -->
+  <nav id="appSubnav" class="app-subnav" style="display: none;"></nav>
+
+  <!-- Dynamic Main Content Area -->
+  <main id="mainContentArea" style="flex: 1; display: flex; flex-direction: column;"></main>
+
+  <!-- Global Footer (Exact match from screenshot) -->
+  <footer class="site-footer">
+    <div>
+      © 2026 Selligine. Powered by Deyrehen
+    </div>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="alert('Selligine Privacy Policy: Data is stored securely in your local browser sandbox.')">Privacy</a>
+      <a href="javascript:void(0)" onclick="alert('Selligine Terms of Service: Retail management system for modern merchants.')">Terms</a>
+    </div>
+  </footer>
+
+  <!-- Global Modal Container for Checkout, Adjustments, Z-Reports, Thermal Receipts -->
+  <div id="globalModalBackdrop" class="modal-backdrop">
+    <div id="globalModalWindow" class="modal-window"></div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
